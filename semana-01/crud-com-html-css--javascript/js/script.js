@@ -42,7 +42,7 @@ function activateInput() {
       clearInput();
       return;
     }
-    // se a tecla enter for digitada a função insertName é chamada
+    // If the enter key is typed, the insertName function is called
     if (event.key === 'Enter') {
       if (isEditing) {
         updateName(event.target.value);
@@ -54,15 +54,15 @@ function activateInput() {
       clearInput();
     }
   }
-  // monitorando as tyeclas digitadas
+  // Monitoring keystrokes
   inputName.addEventListener('keyup', handleTyping);
   inputName.focus();
 }
-// renderizar os nomes na div de lista
+// render the names in the list
 function render() {
-  // função para criar botão delete
+  // function to create delete button
   function createDeleteButton(index) {
-    // deletando names
+    // deleting names
     function deleteName() {
       globalNames.splice(index, 1);
       render();
@@ -88,18 +88,18 @@ function render() {
     span.addEventListener('click', editItem);
     return span;
   }
-  // obter a lista do html
+  // get the list of html
   var divNames = document.querySelector('#names');
   divNames.innerHTML = '';
 
-  // criar ul
-  // fazer n li's, conforme tamanho de globalNames
+  // create ul
+  // create li's, from globalNames
   var ul = document.createElement('ul');
-  // percorrendo o array globalNames
+  // traversing the globalNames array
   for (var i = 0; i < globalNames.length; i++) {
     var currentName = globalNames[i];
 
-    // criando os elementos da lista
+    // create the element list
     var li = document.createElement('li');
     var button = createDeleteButton(i);
     var span = createSpan(currentName, i);
