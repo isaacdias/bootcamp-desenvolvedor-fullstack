@@ -62,7 +62,7 @@ function renderFilteredUsers() {
   });
   usersHTML += '</div>';
   tabPeople.innerHTML = usersHTML;
-  textUsers.innerHTML = `${filteredUsers.length} usuário(s) encontrado(s)`;
+  textUsers.innerHTML = `${filteredUsers.length} usuário(s) encontrado(s  )`;
 }
 
 function renderInformation(users) {
