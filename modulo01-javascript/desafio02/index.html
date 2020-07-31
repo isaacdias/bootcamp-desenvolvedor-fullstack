@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de usuários</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Pesquisa de Usuários</h1>
+    <div class="loading">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field">
+      <input type="text" id="input-text" placeholder="Busca de usuário" />
+      <button id="btn-search" class="waves-effect waves-light darken-4">
+        Buscar
+      </button>
+    </div>
+
+    <div class="search-container">
+      <div class="people-list">
+        <h4><span id="text-users">Nenhum usuário filtrado</span></h4>
+        <span id="filtered-users"></span>
+        <div id="tab-people"></div>
+      </div>
+
+      <div class="people-info">
+        <h4><span id="text-info">Nada a ser exibido</span></h4>
+        <span id="information"></span>
+        <div id="tab-information"></div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
